@@ -1,0 +1,6 @@
+type Club {
+    id: String!
+    name: String!
+    city: String!
+    league: String
+}
