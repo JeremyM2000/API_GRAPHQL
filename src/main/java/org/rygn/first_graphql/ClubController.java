@@ -5,6 +5,8 @@ import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
 
+import java.util.List;
+
 @Controller
 public class ClubController {
 
@@ -13,6 +15,12 @@ public class ClubController {
 
     public ClubController() {
 
+    }
+
+    @QueryMapping
+    public List<Club> allClub(@Argument String id) {
+
+        return this.clubDao.getAllClub();
     }
 
     @QueryMapping

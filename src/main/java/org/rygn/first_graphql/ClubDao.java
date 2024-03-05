@@ -8,9 +8,12 @@ public class ClubDao {
 
     public ClubDao(List<Club> clubs) { this.clubs = clubs; }
 
+    public List<Club> getAllClub()
+    {
+        return this.clubs;
+    }
+
     public Club getById(String id) {
-        Club _club = this.clubs.stream().filter(club -> club.id.equals(id)).findFirst().orElse(null);
-        System.out.println(_club.getCity());
-        return _club;
+        return this.clubs.stream().filter(club -> club.id.equals(id)).findFirst().orElse(null);
     }
 }

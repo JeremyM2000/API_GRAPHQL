@@ -2,6 +2,7 @@
 type Query {
 
     recentPosts(count: Int = 100, offset: Int = 0): [Post]!
+    allClub: [Club]!
     clubById(id: String): Club
 }
 
