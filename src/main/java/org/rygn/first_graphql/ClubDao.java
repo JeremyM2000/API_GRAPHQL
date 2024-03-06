@@ -1,6 +1,7 @@
 package org.rygn.first_graphql;
 
 import java.util.List;
+import java.util.Objects;
 
 public class ClubDao {
 
@@ -25,6 +26,12 @@ public class ClubDao {
     public List<Club> deleteAllClub()
     {
         this.clubs.clear();
+        return this.clubs;
+    }
+
+    public List<Club> deleteOneClubById(String id)
+    {
+        this.clubs.removeIf(club -> Objects.equals(club.id, id));
         return this.clubs;
     }
 }

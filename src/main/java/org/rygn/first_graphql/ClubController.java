@@ -36,7 +36,12 @@ public class ClubController {
     }
 
     @MutationMapping
-    public List<Club> deleteAllClub(){
+    public List<Club> deleteAllClub() {
         return this.clubDao.deleteAllClub();
+    }
+
+    @MutationMapping
+    public List<Club> deleteOneClubById(@Argument String id){
+        return this.clubDao.deleteOneClubById(id);
     }
 }
