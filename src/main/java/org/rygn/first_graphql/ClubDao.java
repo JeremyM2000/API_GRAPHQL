@@ -16,4 +16,15 @@ public class ClubDao {
     public Club getById(String id) {
         return this.clubs.stream().filter(club -> club.id.equals(id)).findFirst().orElse(null);
     }
+
+    public Club postOneClub(Club club) {
+        this.clubs.add(club);
+        return club;
+    }
+
+    public List<Club> deleteAllClub()
+    {
+        this.clubs.clear();
+        return this.clubs;
+    }
 }

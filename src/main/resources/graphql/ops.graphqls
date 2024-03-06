@@ -1,13 +1,11 @@
 # The Root Query for the application
 type Query {
-
-    recentPosts(count: Int = 100, offset: Int = 0): [Post]!
     allClub: [Club]!
-    clubById(id: String): Club
+    clubById(id: String): Club!
 }
 
 # The Root Mutation for the application
 type Mutation {
-
-    writePost(id: String!, title: String!, text: String!, category: String) : Post!
+    postOneClub(id: String!, name: String!, city: String!, league: String) : Club!
+    deleteAllClub: [Club]!
 }
