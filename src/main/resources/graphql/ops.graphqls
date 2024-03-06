@@ -9,4 +9,5 @@ type Mutation {
     postOneClub(id: String!, name: String!, city: String!, league: String) : Club!
     deleteAllClub: [Club]!
     deleteOneClubById(id: String): [Club]!
+    putOneClub(id: String!, name: String!, city: String!, league: String) : Club!
 }

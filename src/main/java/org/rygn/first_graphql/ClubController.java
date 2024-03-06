@@ -44,4 +44,10 @@ public class ClubController {
     public List<Club> deleteOneClubById(@Argument String id){
         return this.clubDao.deleteOneClubById(id);
     }
+
+    @MutationMapping
+    public Club putOneClub(@Argument String id, @Argument String name, @Argument String city, @Argument String league) {
+        Club club = new Club(id, name, city, league);
+        return this.clubDao.putOneClub(club);
+    }
 }

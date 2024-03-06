@@ -34,4 +34,16 @@ public class ClubDao {
         this.clubs.removeIf(club -> Objects.equals(club.id, id));
         return this.clubs;
     }
+
+    public Club putOneClub(Club club) {
+        for (Club c : this.clubs) {
+            if(c.id.equals(club.id))
+            {
+                this.clubs.set(this.clubs.indexOf(c), club);
+                break;
+            }
+        }
+
+        return club;
+    }
 }
