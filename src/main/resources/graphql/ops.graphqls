@@ -2,6 +2,8 @@
 type Query {
     allClub: [Club]!
     clubById(id: String): Club!
+
+    getAllPlayer: [Player]!
 }
 
 # The Root Mutation for the application
