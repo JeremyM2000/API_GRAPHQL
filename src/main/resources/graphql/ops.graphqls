@@ -4,6 +4,7 @@ type Query {
     clubById(id: String): Club!
 
     getAllPlayer: [Player]!
+    getPlayerById(id: String): Player!
 }
 
 # The Root Mutation for the application
@@ -12,4 +13,9 @@ type Mutation {
     deleteAllClub: [Club]!
     deleteOneClubById(id: String): [Club]!
     putOneClub(id: String!, name: String!, city: String!, league: String) : Club!
+
+    postOnePlayer(id: String, firstName: String, lastName: String, position: String, number: Int, clubId: String): Player!
+    deleteAllPlayer: [Player]!
+    deleteOnePlayerById(id: String): [Player]!
+    putOnePlayer(id: String, firstName: String, lastName: String, position: String, number: Int, clubId: String): Player!
 }
